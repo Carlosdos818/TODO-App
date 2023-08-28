@@ -25,12 +25,15 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 
 
 ## wireframes
+![layout wireframe](images/wireframe1.png)
+![layout wireframe](images/wireframe2.png)
+
+## ERD
 ![layout wireframe](images/todo-app.png)
-
-
+![layout wireframe](images/ERD-todo-app.png)
 
 ## Future Enhancements
-- User authentication to allow multiple users ti manage their tasks.
+- User authentication to allow multiple users to manage their tasks.
 - Task categories and tags.
 - Due date for tasks.
 - Prioritizing tasks.
