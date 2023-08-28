@@ -25,7 +25,7 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 
 
 ## wireframes
-![layout wireframe](images/logo2.png)
+![layout wireframe](images/logosmall.png)
 ![layout wireframe](images/wireframe1.png)
 ![layout wireframe](images/wireframe2.png)
 
