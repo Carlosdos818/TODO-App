@@ -30,8 +30,8 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 ![layout wireframe](images/wireframe2.png)
 
 ## ERD
-![layout wireframe](images/todo-app.png)
-![layout wireframe](images/ERD-todo-app.png)
+
+![layout wireframe](images/ERDtodoapp.png)
 
 ## Future Enhancements 
 ##### (if time is available)
