@@ -5,6 +5,8 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 ## User Stories
 #### As a user, I want the ability to...
 
+- create an account
+- manage own account
 - Create new tasks
 - View the list of tasks
 - Update task status (complete/incomplete)
@@ -12,9 +14,7 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 - Delete tasks
 
 
-## Epics 
-- allow the user to create an account
-- allow the user to manage its own account to save task
+
 
 
 ## technologies Used
@@ -32,7 +32,8 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 ![layout wireframe](images/todo-app.png)
 ![layout wireframe](images/ERD-todo-app.png)
 
-## Future Enhancements
+## Future Enhancements 
+####(if time is available)
 - User authentication to allow multiple users to manage their tasks.
 - Task categories and tags.
 - Due date for tasks.
