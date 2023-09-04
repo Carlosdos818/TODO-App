@@ -1,0 +1,221 @@
+
+
+/*Header*/
+.header {
+  background-color: rgba(58, 136, 167, .35);
+  text-align: center;
+}
+
+/* Sub Header*/
+.sub-header {
+  /* background-color: rgba(58, 136, 167, .35); */
+  text-align: center;
+}
+
+
+/* Reset some default styles for better consistency */
+body, ul {
+  margin: 0;
+  padding: 50px;
+  list-style: none;
+  font-family: Helvetica Neue;
+}
+
+/* Style the wrapper with a grid */
+.wrapper {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 450px;
+  max-height: 850px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+.add-new-todo {
+  display: flex;
+  /* background-color: rgba(58, 136, 167, 0.35); */
+  align-items: center;
+  justify-content:space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+}
+/*Login button*/
+.login {
+/* background-color: rgba(58, 136, 167, .35); */
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* button*/
+.button {
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.fa-square-plus {
+  font-size: 24px;
+  color: darkblue;
+}
+
+/*Plus sign*/
+.fa-plus {
+  /* background-color: rgba(58, 136, 167, .50); */
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*View sign*/
+.fa-eye {
+  /* background-color: rgba(58, 136, 167, .50); */
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*Edit sign */
+.fa-file-pen {
+  /* background-color: rgba(58, 136, 167, .50); */
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  font-size: 24px;
+  color: darkblue;
+
+}
+
+/* Style the to-do list */
+.todo-list {
+  display: grid;
+  gap: 10px;
+}
+
+/* Style individual to-do items */
+.todo-item {
+  background-color: rgba(32, 157, 198, 0.35);
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr; /* Create three equally spaced columns */
+  justify-self: stretch;
+  gap: 10px; /* Add a gap between columns */
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.new-todo-item {
+  background-color: rgba(32, 157, 198, 0.35);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create three equally spaced columns */
+  justify-self: stretch;
+  gap: 10px; /* Add a gap between columns */
+  padding: 10px;
+  border: 1px solid #ddd;
+
+}
+
+ 
+
+/* Style the input for adding new to-do items */
+.add-todo {
+  display: flex;
+  gap: 10px;
+}
+
+.add-todo input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-todo button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-todo button:hover {
+  background-color: #0056b3;
+}
+
+/* Style completed to-do items */
+.todo-item.completed {
+  text-decoration: line-through;
+  background-color: #f0f0f0;
+}
+
+/* Style delete button for to-do items */
+.delete-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+/* Basic Button Styles */
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Change the background color to your preference */
+  color: #fff; /* Text color */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+}
+
+/* Optional: Add more styles for different button states (active, focus, etc.) */
+.login-button:active {
+  background-color: #207cca; /* Change the background color when clicked */
+}
+
+/* Optional: Style the button to look like a link */
+.login-button-as-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  color: #3498db;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-button-as-link:hover {
+  color: #2980b9;
+}
+
+.add-button {
+  display: block;
+  font-size: 24px;
+  margin: 0 auto;
+  color: darkblue;
+}

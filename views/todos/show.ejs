@@ -1,0 +1,15 @@
+<%- include('../layouts/partials/header', { title: 'View Todo' }) %>
+<div class="wrapper">
+    <div class="todo-list">
+        <h5 class="header">View Todo</h5>
+
+        <div class="">
+            <h4>Title: <%= todo.title %></h4>
+            <p>Category: <%= todo.category %></p> <!-- Display the category here -->
+            <p>Description: <%= todo.description %></p>
+            <!-- Include other details you want to display -->
+        </div>
+        <a href="/todos" class=""><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+</div>
+<%- include('../layouts/partials/footer') %>

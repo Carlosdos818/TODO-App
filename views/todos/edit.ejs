@@ -1,0 +1,22 @@
+<%- include('../layouts/partials/header', { title: 'Edit Todo' }) %>
+<div class="wrapper">
+  <h2 class="header">Edit Todo</h2>
+
+  <form action="/todos/<%= todo._id %>" method="POST" class="todo-list">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name="title" value="<%= todo.title %>" required>
+    </div>
+    <div class="">
+      <label for="taskId">Category</label>
+      <input type="text" class="form-control" id="taskId" name="taskId" value="<%= todo.taskId %>" required>
+    </div>
+    <div class="">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="4" required><%= todo.description %></textarea>
+    </div>
+    <button type="submit" class="button"><i class="fa-regular fa-pen-to-square"></i></button>
+  </form>
+</div>
+<%- include('../layouts/partials/footer') %>

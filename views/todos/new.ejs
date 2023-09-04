@@ -1,7 +1,38 @@
-<%- include('../partials/header') %>
+<%- include('../layouts/partials/header', { title: 'New Todo' }) %>
 
-  <h1>Add Todo</h1>
+<div class="wrapper">
+  <h2 class="header">Create New Todo</h2>
+  <h4 class="header">To-Do</h4>
+  <main>
+    <form action="/todos" method="POST">
+      <div class="new-todo-item">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="new-todo-item">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="urgent">Urgent</option>
+          <option value="high">High Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="low">Low Priority</option>
+        </select>
+      </div>
+      
+      <div class="new-todo-item">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="add-button" style="border: none; background: none; padding: 0;">
+        <i class="fa-solid fa-folder-plus"></i>
+      </button>
+      
+    </form>
+  </main>
+ 
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> Todo App</p>
+  </footer>
+</div>
 
-  <a href="/todos">Back to All Todos</a>
-
-<%- include('../partials/footer') %>
+<%- include('../layouts/partials/footer') %>

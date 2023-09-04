@@ -2,11 +2,34 @@
 const mongoose = require('mongoose')
 // Now we write the rules for our movies
 const todoSchema = new mongoose.Schema(
-     
-    {
-      timestamps: true, // Add timestamps fields createdAt and updatedAt
-    }
-  );
+  {
+    category: {
+      type: String,
+      required: true,
+      unique: true
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+    comments: [{
+      type: String,
+    }],
+    completed: {
+      type: Boolean,
+      default: false,
+    },
+  
+  },  
+      
+  {
+    timestamps: true, // Add timestamps fields createdAt and updatedAt
+  }
+);
 
 // Our schema need to compile into a model, we'll export the model to use in our controllers/routes
 // Every single model has functions baked into them, these functions allow us to CRUD on these resources(more on that in controllers)
