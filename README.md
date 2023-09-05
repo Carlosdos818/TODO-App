@@ -22,6 +22,9 @@ A simple ToDo app built using Node.js and Express. This app allows users to mana
 - Express
 - MongoDB
 - EJS(Embedded JavaScript) for templates
+- Mongoose
+- OAuth
+- Passport
 
 
 ## wireframes
