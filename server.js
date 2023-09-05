@@ -1,11 +1,13 @@
 // Import Dependencies
 require('dotenv').config();// allows to get access to the .env properties
 require('./config/database');// config the connection to connect to mongodb
+require('./config/passport')// config the connection to connect to passport
 const express = require('express');
 // const fetch = require('node-fetch')
 const app = express();
 const path = require('path') 
 const { setGlobalMiddlewares } = require('./utils/middleware'); // Import the middleware
+
 
 
 

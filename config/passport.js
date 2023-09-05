@@ -1,25 +1,45 @@
 // passport.js
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const User = require('../models/user');
+
+// Define our passport oauth strategy
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 passport.use(new GoogleStrategy(
   {
-    clientID: GOOGLE_CLIENT_ID,
-    clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: 'http://your-app-domain/auth/google/callback'
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_SECRET,
+    callbackURL: process.env.GOOGLE_CALLBACK
   },
-  (accessToken, refreshToken, profile, done) => {
+  async function(accessToken, refreshToken, profile, cb) {
     // Find or create user based on profile.id (Google ID)
     // Call done() with user data
+    try {
+      // check for the user in our db
+      let user = await User.findOne({ googleId: profile.id})
+      // If a user is found, provide to passport
+      if (user) return cb(null, user)
+      // Otherwise, we'll create a new user to provide to passport
+    user = await User.create({
+      name: profile.displayName,
+      googleId: profile.id,
+      email: profile.emails[0].value,
+      avatar: profile.photos[0].value
+    })
+    } catch (err) {
+      return cb(err)
+    }
   }
 ));
 
-passport.serializeUser((user, done) => {
+// This is the method to serialized our users
+passport.serializeUser(function(user, cb) {
   // Serialize user ID into session
-  done(null, user.id);
+  cb(null, user.id);
 });
-
-passport.deserializeUser((id, done) => {
+// This is the method to deserialized our users
+passport.deserializeUser(async function(userId, cb) {
   // Deserialize user by ID from session
   // Find user in database and call done() with user data
+  cb(null, await User.findById(userId))
 });

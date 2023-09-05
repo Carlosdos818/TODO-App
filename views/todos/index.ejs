@@ -1,5 +1,9 @@
 <%- include('../layouts/partials/header', { title: 'Todo List' }) %>
+
 <div class="wrapper">
+  <nav>
+      <a href="/logout">Log Out</a>
+  </nav>
   <div class="header">
     <h2>Todo List</h2>
   </div>
@@ -22,14 +26,13 @@
             <i class="fa-solid fa-trash" style="color: blue;"></i>
           </button>
         </form>
-        
-        
       </li>
-      <% }); %>
+    <% }); %>
   </div>
   <footer>
     <p>&copy; <%= new Date().getFullYear() %> Todo App</p>
   </footer>
 </div>
-  
+
 <%- include('../layouts/partials/footer') %>
+

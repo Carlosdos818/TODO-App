@@ -1,15 +1,21 @@
 <%- include('../layouts/partials/header', { title: 'View Todo' }) %>
 <div class="wrapper">
-    <div class="todo-list">
-        <h5 class="header">View Todo</h5>
+    <nav>
+        <a href="/logout">Log Out</a>
+    </nav>
+    <div class="">
+        <h3 class="header">View Todo</h3>
 
-        <div class="">
-            <h4>Title: <%= todo.title %></h4>
-            <p>Category: <%= todo.category %></p> <!-- Display the category here -->
-            <p>Description: <%= todo.description %></p>
+        <div class="view-todo">
+           <div class=""> <h4>Title: <%= todo.title %></h4></div>
+           <div class=""><p>Category: <%= todo.category %></p></div> <!-- Display the category here -->
+            <div class=""><p>Description: <%= todo.description %></p></div>
             <!-- Include other details you want to display -->
         </div>
         <a href="/todos" class=""><i class="fa-solid fa-arrow-left"></i></a>
     </div>
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Todo App</p>
+      </footer>
 </div>
 <%- include('../layouts/partials/footer') %>

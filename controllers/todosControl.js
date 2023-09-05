@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Todo = require('../models/Todo');
 const { v4: uuidv4 } = require('uuid'); // Import the UUID generator
+const passport = require('passport')
 
 
 // Display Home Page
@@ -10,11 +11,37 @@ router.get('/', (req, res) => {
     res.render('home', { title: 'Home' });
 });
 
+// Google OAuth login route
+router.get('/auth/google', passport.authenticate(
+    // We'll tell which strategy to use
+    'google',
+    {
+        // This request the user's profile and email
+        scope: ['profile', 'email']
+    }
+))
+
+// Google OAuth callback route
+router.get('/oauth2callback', passport.authenticate(
+    'google',
+    {
+        successRedirect: '/todos',
+        failureRedirect: '/todos'
+    }
+))
+
+// This is OAuth logout route
+router.get('/logout', function(req, res) {
+    req.logout(function() {
+        res.redirect('/')
+    })
+})
+
 // Display Index Page
 router.get('/todos', async (req, res) => {
     try {
         const todos = await Todo.find();
-        res.render('todos/index', { todos });
+        res.render('todos/index', { todos, title: 'todos' });
     } catch (err) {
         console.error('Error fetching todos:', err);
         res.redirect('/');

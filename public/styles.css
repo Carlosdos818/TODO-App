@@ -40,13 +40,21 @@ body, ul {
 
 .add-new-todo {
   display: flex;
-  /* background-color: rgba(58, 136, 167, 0.35); */
+  background-color: rgba(58, 136, 167, 0.35);
   align-items: center;
   justify-content:space-between;
   padding: 5px 10px;
   border-radius: 5px;
-  
 }
+
+/* View Todo*/
+.view-todo {
+  background-color: rgba(32, 157, 198, 0.35);
+  text-align: center;
+}
+
+
+
 /*Login button*/
 .login {
 /* background-color: rgba(58, 136, 167, .35); */
@@ -218,4 +226,22 @@ body, ul {
   font-size: 24px;
   margin: 0 auto;
   color: darkblue;
+}
+
+/*Nav */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+/*Login */
+.login img {
+  height: 30px;
+}
+/*Logout button*/
+.logout-button { 
+  color: darkblue;
+  cursor: pointer;
+  font-size: 14px;
 }
